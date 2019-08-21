@@ -9,6 +9,9 @@ const store = (function () {
   ];
   const hideCheckedItems = false;
   const searchTerm = '';
+  function findById(id) {
+    return store.items.find(item => item.id === id);
+  }
 
   return { 
     items,
