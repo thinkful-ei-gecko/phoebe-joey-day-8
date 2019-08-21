@@ -1,6 +1,7 @@
 'use strict';
 
 
+
 // eslint-disable-next-line no-unused-vars
 const shoppingList = (function(){
 
@@ -60,10 +61,10 @@ const shoppingList = (function(){
     store.items.push({ id: cuid(), name: itemName, checked: false });
     try{
       Item.validateName(itemName);
-      store.items.push(Item.create(itemName));
+      store.items.push(Item.create(itemName))
       render();
-    } catch(TypeError){
-      console.log(`cannot add item:${TypeError.message}`);
+    } catch(error){
+      console.error(`cannot add item:${TypeError.message}`);
     }
   }
   
