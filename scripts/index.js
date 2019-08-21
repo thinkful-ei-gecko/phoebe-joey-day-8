@@ -9,6 +9,7 @@ function main() {
 }
 
 $(main);
+console.log('hello');
 
-console.log(foo);
 console.log(store);
+console.log(foo);
