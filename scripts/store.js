@@ -12,7 +12,17 @@ const store = (function () {
   function findById(id) {
     return store.items.find(item => item.id === id);
   }
+  function addItem(){
+    try{
+      Item.validateName(name);
+      
 
+    }
+    catch(error){
+
+    }
+  };
+   
   return { 
     items,
     hideCheckedItems,
